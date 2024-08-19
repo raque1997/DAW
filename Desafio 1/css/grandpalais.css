@@ -1,0 +1,338 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.body {
+    background-color: #f8f9fa;
+}
+
+.logo {
+    color: #f8f9fa;
+    font-size: 30px;
+}
+
+.logo span{
+    color: #fdc500;
+}
+
+.header {
+    background-image: url('../img/paris2024.webp'); /* Cambia esta ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 250px; /* Ajusta la altura según sea necesario */
+    position: relative;
+    color: rgb(218, 9, 9); /* Color de texto para que se vea bien sobre la imagen */
+    text-align: center;
+    display: flex; /* Usar flexbox para centrar el contenido */
+    flex-direction: column; /* Colocar los elementos en columna */
+    justify-content: center; /* Centrar verticalmente */
+}
+
+.header-content {
+    padding: 20px; /* Espacio alrededor del contenido */
+}
+
+.header-content {
+    margin-top: 210px; /* Espacio entre la imagen y el texto */
+}
+
+header h1, header p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15%;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad */
+}
+
+.menu-bar{
+    background-color: #212529;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+}
+
+.menu-bar ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu-bar ul li{
+    padding: 10px 30px;
+    position: relative;
+}
+
+.menu-bar ul li a{
+    font-size: 20px;
+    color: #f8f9fa;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.menu-bar ul li a:hover{
+    color: #fdc500;
+}
+
+.fas{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+.dropdown-menu{
+    display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #212529;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul{
+    display: block;
+    margin: 10px;
+    
+}
+
+
+/* menu desplegable */
+
+#menu .subMenu {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background: #212529; /* cambiar color fondo*/
+    padding:0;
+   }
+   
+   /* items del menu desplegable */
+   
+   #menu .opc1 {
+    float:none;
+    width:150px;
+   }
+   
+   /* enlaces de los items del menu desplegable */
+   
+   #menu .subMenu a {
+    line-height:120%;
+    padding:10px 15px;
+   }
+   
+   /* items del menu desplegable al pasar el ratón */
+   
+   #menu .desplegable:hover > .subMenu {
+    display:block;
+   } 
+
+
+
+/* css de pagina principal*/
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+.mainArticle {
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgb(0,0,0, 01);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 70%;    
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.mainArticle .image1{
+    margin-bottom: 20px;
+}
+
+.image1 img{
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+
+}
+
+.aside {
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgb(0,0,0, 01);
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 25%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.aside .extraArticles {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.image2 img{
+    width: 100%;
+    height: 50%;
+}
+
+.botonInicio{
+    background-color: #101610; 
+    color: white; /* Color del texto */
+    padding: 15px 32px; /* Aumentar el tamaño del botón */
+    font-size: 30px; /* Tamaño de la fuente */
+    border: none; /* Sin borde */
+    border-radius: 5px; 
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre el botón */
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer{
+    background-color: #333;
+    color: #fff;
+    text-align:  center;
+    padding: 0;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+
+
+/* Media Query para pantallas grandes (hasta 1200px) */
+@media (max-width: 1200px) {
+    #menu{
+        width: 100%;
+    }
+    .contenedor {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .mainArticle {
+        width: 70%;
+        padding: 15px;
+        margin-left: 5px;
+    }
+
+    .aside {
+        width: 30%;
+        padding: 15px;
+    }
+
+    .botonInicio {
+        font-size: 25px;
+    }
+
+    .footer{
+        width: 100%;
+    }
+}
+
+/* Media Query para pantallas medianas (hasta 992px) */
+@media (max-width: 992px) {
+
+    #menu{
+        width: 100%;
+    }
+
+    .contenedor {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .mainArticle {
+        width: 70%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .aside {
+        width: 30%;
+        margin-right: 0;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .botonInicio {
+        font-size: 22px;
+        padding: 12px 28px;
+    }
+
+    .image1 img, .image2 img {
+        height: auto;
+    }
+
+    .footer{
+        width: 100%;
+    }
+
+}
+
+/* Media Query para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+
+    #menu{
+        width: 100%;
+    }
+
+    .contenedor {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .mainArticle {
+        width: 70%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 8px;
+    }
+
+    .aside {
+        width: 30%;
+        padding: 8px;
+        margin-top: 5px;
+    }
+
+    .botonInicio {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .image1 img, .image2 img {
+        height: auto;
+    }
+
+    .footer{
+        width: 100%;
+    }
+}
